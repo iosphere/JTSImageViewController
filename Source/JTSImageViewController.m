@@ -201,7 +201,11 @@ typedef struct {
 
 #pragma mark - UIViewController
 
+#ifdef NSFoundationVersionNumber_iOS_8_1
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+#else
+- (NSUInteger)supportedInterfaceOrientations {
+#endif
     
     /*
      iOS 8 changes the behavior of autorotation when presenting a
