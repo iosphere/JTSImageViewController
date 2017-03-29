@@ -35,10 +35,11 @@
     return text;
 }
 
-- (NSMutableDictionary *)userInfo {
+- (NSDictionary *)userInfo {
     if (_userInfo == nil) {
-        _userInfo = [[NSMutableDictionary alloc] init];
+        _userInfo = [[NSDictionary alloc] init];
     }
+
     return _userInfo;
 }
 
